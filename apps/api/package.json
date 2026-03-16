@@ -1,26 +1,23 @@
 {
   "name": "api",
-  "version": "0.0.1",
-  "type": "module",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "node --watch src/index.ts",
-    "build": "tsup src/index.ts --format esm",
-    "start": "node dist/index.js",
+    "dev": "tsx --watch src/server.ts",
+    "start": "node dist/server.js",
+    "build": "tsc -b",
     "lint": "eslint",
-    "format": "prettier --write \"**/*.ts\"",
+    "format": "prettier --write \"**/*.{js,ts,tsx}\"",
     "typecheck": "tsc --noEmit"
   },
-  "dependencies": {
-    "express": "^5.2.1"
-  },
   "devDependencies": {
-    "@blak/eslint-config": "workspace:^",
+    "@blak/eslint-config": "workspace:*",
     "@blak/typescript-config": "workspace:*",
+    "@tsconfig/node22": "^22.0.5",
     "@types/express": "^5.0.6",
     "@types/node": "^25.1.0",
-    "eslint": "^9.39.2",
-    "tsup": "^8.0.0",
+    "express": "^5.2.1",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   }
 }

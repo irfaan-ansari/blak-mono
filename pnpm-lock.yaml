@@ -28,14 +28,31 @@ importers:
         version: 5.9.3
 
   apps/api:
-    dependencies:
-      express:
-        specifier: ^5.2.1
-        version: 5.2.1
     devDependencies:
+      '@blak/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config
+      '@blak/typescript-config':
+        specifier: workspace:*
+        version: link:../../packages/typescript-config
+      '@tsconfig/node22':
+        specifier: ^22.0.5
+        version: 22.0.5
       '@types/express':
         specifier: ^5.0.6
         version: 5.0.6
+      '@types/node':
+        specifier: ^25.1.0
+        version: 25.2.3
+      express:
+        specifier: ^5.2.1
+        version: 5.2.1
+      tsx:
+        specifier: ^4.21.0
+        version: 4.21.0
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
 
   apps/web:
     dependencies:
@@ -1764,6 +1781,9 @@ packages:
 
   '@ts-morph/common@0.27.0':
     resolution: {integrity: sha512-Wf29UqxWDpc+i61k3oIOzcUfQt79PIT9y/MWfAGlrkjg6lBC1hwDECLXPVJAhWjiGbfBCxZd65F/LIZF3+jeJQ==}
+
+  '@tsconfig/node22@22.0.5':
+    resolution: {integrity: sha512-hLf2ld+sYN/BtOJjHUWOk568dvjFQkHnLNa6zce25GIH+vxKfvTgm3qpaH6ToF5tu/NN0IH66s+Bb5wElHrLcw==}
 
   '@turbo/gen@2.8.7':
     resolution: {integrity: sha512-3393Qo7Hi1Y0Qr+7JEQ+KflhoqFCzqj8jK1EnSZDsZG0lV3XL2Ajpt5T3iGsxZ/Ss2ujqXCC4EPbw8+AuZ3c6w==}
@@ -5972,6 +5992,8 @@ snapshots:
       fast-glob: 3.3.3
       minimatch: 10.2.4
       path-browserify: 1.0.1
+
+  '@tsconfig/node22@22.0.5': {}
 
   '@turbo/gen@2.8.7(@types/node@25.2.3)':
     dependencies:
